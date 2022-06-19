@@ -68,7 +68,7 @@ const Home = ({ darkMode }) => {
                     .filter(country => region ? country.region === region : country.region)
                     .map((country, index) => {
                         return (
-                            <div className='country' style={{ background: darkMode ? '#2B3844' : '#ffffff' }}>
+                            <div className='country' style={{ background: darkMode ? '#2B3844' : '#ffffff' }} key={index}>
                                 <img src={country.flags.svg} alt="flag" />
                                 <section>
                                     <h2 style={{ color: darkMode ? '#ffffff' : '#111517' }}>{country.name.common}</h2>
